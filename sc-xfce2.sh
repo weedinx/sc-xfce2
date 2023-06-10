@@ -9,12 +9,6 @@ apt update && apt upgrade -y
 apt install firmware-linux-nonfree firmware-iwlwifi firmware-atheros firmware-realtek -y
 
 #-------------------------
-#Xorg minimo
-#-------------------------
-
-
-
-#-------------------------
 #Xfce minimo
 #-------------------------
 
@@ -26,9 +20,9 @@ apt --no-install-recommends install -y xfce4 xfce4-goodies
 #-------------------------
 
 
-
-
 #### Complementos ###
+apt --no-install-recommends install -y network-manager-gnome
+sed -i 's/false/true/g' /etc/NetworkManager/NetworkManager.conf
 apt install flatpak gnome-software-plugin-flatpak gnome-software -y
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 apt --no-install-recommends install -y cups system-config-printer printer-driver-gutenprint printer-driver-escpr cups-client hplip -y
