@@ -13,6 +13,7 @@ apt install firmware-linux-nonfree firmware-iwlwifi firmware-atheros firmware-re
 #-------------------------
 
 apt --no-install-recommends install -y xfce4 xfce4-goodies
+apt --no-install-recommends install -y lightdm
 
 
 #-------------------------
